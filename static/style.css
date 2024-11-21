@@ -1,0 +1,155 @@
+/*General Page Styling*/
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    display:flex;
+    flex-direction: column; /*To stack the header, content adn foooter vertically*/
+    min-height: 100%; /*Ensure body takes the full height*/
+}
+
+/*Additional BG COlors for Pages I have added*/
+body.indexpage{
+    /*background-color: #afdde5;*/
+    background: url('images/green1.jpeg');
+    background-size: cover;
+    /*background-blend-mode: overlay;*/
+}
+
+body.thankyoupage{
+    background-color: lightcyan;
+}
+
+body.adminpage{
+    background-color: lightgoldenrodyellow;
+}
+
+body.adminpage a,body.thankyoupage a{
+    margin-top: 20px !important;
+}
+
+/*Header Styling*/
+header{
+    background: linear-gradient(45deg,#024950,#0fa4af);
+    color: silver;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+/*Content box styling*/
+.content-box{
+    background: url('images/box1.jpeg');
+    /*background-repeat: no-repeat*/
+    /*background-attachment: fixed*/
+    /*background-position: center*/
+    /*background-size: cover*/
+    text-align: center;
+    text-decoration: wavy;
+    text-wrap: 1;
+    border: 1px solid ccc;
+    border-radius: 44px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px #f1f1f1;
+    /*flex-grow: 1;*/ /*Allow this section to take up the available space*/
+    gap: 15px;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+
+/*Link Styling*/
+a{
+    color: grey;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+a:hover{
+    color: #f7fce6;
+    text-decoration: underline;
+}
+
+
+/*Form Styling*/
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: bolder;
+}
+
+form input[type='text'], form input[type='email'], form textarea {
+    /*color:#66fcf1;*/
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2%;
+}
+
+form button:hover{
+    transform: scale(0.8);
+    background-color: greenyellow;
+}
+
+
+
+/*Erase Button Style*/
+.erase-button{
+    background-color: #FF5733;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.erase-button:hover{
+    transform: scale(0.8);
+    background-color: #C13B28;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /*Changed from 20px to auto to push the footer to the bottom*/
+    font-size: 14px;
+    color: silver;
+    background: linear-gradient(45deg,#024950,#0fa4af);
+}
+

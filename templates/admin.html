@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body calss="adminpage">
+    <header>
+        Admin Dashboard
+    </header>
+    <div class="content-box">
+        <h1>Submitted Messages</h1>
+        <ul>
+            {% for submission in submissions %}
+                <li><strong>{{submission[1]}}</strong>->{{submission[2]}}<strong>: {{submission[3]}}</strong></li>
+            {% endfor %}
+        </ul>
+
+        <!-- Erase Data Button -->
+        <form action="/erase" method="POST">
+            <button type="submit" class="erase-button">Erase Data</button>
+        </form>
+        <a href="/"> Go back to the form </a>
+    </div>
+    <footer>
+        Arun - Event Management App
+    </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header>
+        Admin Login
+    </header>
+    <div class="content-box">
+        <form action="/admin/login" method="POST">
+            <label for="username">username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </div>
+    <footer>
+        <a href="https://www.instagram.com/quirky_aesthete" target="_blank" rel="noopener noreferrer"> Instagram </a>
+        Arun - Event Management App
+        <a href="https://www.linkedin.com/in/arun-prakash3" target="_blank" rel="noopener noreferrer">linkedin </a>
+    </footer>
+</body>
+</html>
